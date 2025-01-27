@@ -13,7 +13,7 @@ public class HelloWorldService {
     @Autowired
     HelloWorldAssistant assistant;
 
-    @GetMapping
+    @GetMapping(produces = "text/html")
     public String index(@RequestParam(value = "name", required = false) String name) {
         if (name != null) {
             return assistant.chat("Hello from " + name);
