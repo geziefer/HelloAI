@@ -13,7 +13,6 @@ import dev.langchain4j.service.AiServices;
  * We want the patient be funny and silly.
  * We start the conversation manually and then let it go automatically for some iterations.
  * The answers should be limited to a sentence or two.
- * The provided answers of the AIs should be streamed to output in order to see them while being created.
  * @author alexander.ruehl
  */
 public class Part1 {
