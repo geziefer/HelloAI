@@ -1,4 +1,4 @@
-package de.vsti.aiduke.demo.service;
+package de.vsti.aiduke.hello.service;
 
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
