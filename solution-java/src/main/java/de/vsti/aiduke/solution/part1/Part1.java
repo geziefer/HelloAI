@@ -1,4 +1,4 @@
-package de.vsti.aiduke.solution;
+package de.vsti.aiduke.solution.part1;
 
 import dev.langchain4j.memory.ChatMemory;
 import dev.langchain4j.memory.chat.MessageWindowChatMemory;

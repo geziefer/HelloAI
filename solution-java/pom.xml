@@ -49,7 +49,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>de.vsti.aiduke.solution.Part1</mainClass>
+                            <mainClass>de.vsti.aiduke.solution.part1.Part1</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
