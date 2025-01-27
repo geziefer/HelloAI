@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>de.vsti.aiduke</groupId>
-    <artifactId>hello</artifactId>
+    <artifactId>hello-java</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
