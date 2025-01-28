@@ -107,6 +107,7 @@ public class Part2 {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Hello, I am your assistant. Please enter your question. Type 'exit' to quit or 'rag'/'norag' to switch modes (currently norag).\n");
             while (true) {
+                System.out.print("> ");
                 String input = scanner.nextLine();
                 System.out.println();
 
