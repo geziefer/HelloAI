@@ -21,7 +21,6 @@ import dev.langchain4j.store.embedding.EmbeddingStore;
 import dev.langchain4j.store.embedding.inmemory.InMemoryEmbeddingStore;
 
 import java.net.URISyntaxException;
-import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
@@ -51,7 +50,7 @@ public class Part2 {
     }
 
     Part2() {
-        // models and memorys are identical for both
+        // models and memories are identical for both
         modelRAG = OpenAiChatModel.builder()
                 .apiKey(OPENAI_API_KEY)
                 .modelName("gpt-4o-mini")
