@@ -20,7 +20,11 @@ import dev.langchain4j.service.AiServices;
 import dev.langchain4j.store.embedding.EmbeddingStore;
 import dev.langchain4j.store.embedding.inmemory.InMemoryEmbeddingStore;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.URISyntaxException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
@@ -71,9 +75,13 @@ public class Part2 {
         // model with RAG is enhanced by document embeddings which is read from a text file in resources folder
         String filename = "doc/ApisPerplexa.txt";
         Path path;
-        try {
-            path = Paths.get(Objects.requireNonNull(Part2.class.getClassLoader().getResource(filename)).toURI());
-        } catch (URISyntaxException e) {
+        try (InputStream inputStream = Part2.class.getClassLoader().getResourceAsStream(filename)) {
+            path = Files.createTempFile("apisperplexa", ".txt");
+            OutputStream outputStream = Files.newOutputStream(path);
+            if (inputStream != null) {
+                inputStream.transferTo(outputStream);
+            }
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
         DocumentParser parser = new TextDocumentParser();
